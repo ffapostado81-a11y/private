@@ -6,16 +6,32 @@
 body{background:radial-gradient(ellipse at 50% -18%,#52257b 0,transparent 51%),radial-gradient(ellipse at 100% 70%,#241138,transparent 45%),#090710;background-attachment:fixed}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(#bd82ff12 1px,transparent 1px),linear-gradient(90deg,#bd82ff12 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(#000,transparent 90%)}
 header,main{position:relative}header{background:#0d0916c9;backdrop-filter:blur(16px)}strong b{color:#d19aff;text-shadow:0 0 20px #a745ff}.intro{margin:24px 0 30px}h1{color:#fff;background:linear-gradient(120deg,#fff 18%,#d8a6ff 72%,#a478ff);background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 5px 22px #ad54ff55)}
-section{position:relative;isolation:isolate;background:linear-gradient(145deg,#271738,#15101f 54%,#100d18);border-color:#7848a272;box-shadow:inset 0 1px #e7baff33,inset 0 -3px #08061190,0 18px 35px #0007;transition:border-color .2s,box-shadow .2s}
+section{position:relative;isolation:isolate;background:linear-gradient(145deg,#271738,#15101f 54%,#100d18);border-color:#7848a272;box-shadow:inset 0 1px #e7baff33,inset 0 -3px #08061190,0 18px 35px #0007;transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out,border-color .2s,box-shadow .2s}
 section::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at var(--x,25%) var(--y,0%),#cb83ff30,transparent 58%)}
 section:hover,section:focus-within{border-color:#ba75fa;box-shadow:inset 0 1px #f3c8ff55,0 14px 36px #0008,0 0 27px #a245ec35}h2{color:#e0b6ff;text-shadow:0 0 14px #b453ff8c}.row{border-top-color:#b283e325}.row label{border-color:#bb6aff}.row:hover label{color:#f1d9ff}
 button{box-shadow:inset 0 1px #e6aeff60,0 5px 16px #0007;background:linear-gradient(145deg,#6332a0,#321d51);padding:10px 15px}input[role=switch]:checked{background:linear-gradient(125deg,#ac50ff,#6e38d8);box-shadow:0 0 13px #a948ff8c,inset 0 1px #f7ccff8c}
 @media(prefers-reduced-motion:reduce){section,input[role=switch]::before{transition:none}section{transform:none}}
+</style><style id="lunar-purple-brand">
+header strong{display:inline-block;font-size:clamp(1rem,3vw,1.4rem);font-weight:850;letter-spacing:.14em;color:#d39aff;background:linear-gradient(105deg,#9d56f4 0%,#cc88ff 30%,#edbbff 46%,#bc6cff 59%,#9d56f4 100%);background-size:230% 100%;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 9px #a354ff80);animation:lunar-shine 4s linear infinite}
+header strong b{color:inherit;text-shadow:none}
+@keyframes lunar-shine{from{background-position:100% 50%}to{background-position:0% 50%}}
+body{background:radial-gradient(ellipse at 48% -20%,#60238a 0,transparent 51%),radial-gradient(ellipse at 100% 70%,#301747,transparent 45%),#0b0713}
+h1{background-image:linear-gradient(120deg,#edbdff,#cc8bff 58%,#a66aff)}
+@media(prefers-reduced-motion:reduce){header strong{animation:none}}
 </style><style>
+body{background:radial-gradient(ellipse at 50% -10%,#49236c,transparent 53%),#0b0813}
+.bypass-title{position:relative;width:100%;height:34px;display:grid;place-items:center;padding:0 8px;color:#e2b5ff;font-size:.95rem;line-height:1;font-weight:900;letter-spacing:.22em;text-indent:.22em;white-space:nowrap;text-shadow:0 0 12px #b778f8aa;border-block:1px solid #b77af23b;background:repeating-linear-gradient(90deg,#c08cff12 0 1px,transparent 1px 44px),radial-gradient(ellipse at center,#7034a6a6,transparent 76%),#100b19}
+section{transform:none;background:linear-gradient(145deg,#231632,#15101f 65%,#100d18)}
+section:hover{border-color:#7848a272;box-shadow:inset 0 1px #e7baff33,inset 0 -3px #08061190,0 18px 35px #0007}
+section:focus-within{border-color:#ba75fa}
+</style><style>.bypass-title{height:48px;font-size:clamp(1.05rem,4vw,1.4rem);letter-spacing:.16em;text-indent:.16em}</style><style>
 body{background:radial-gradient(ellipse at 50% 0,#081629,transparent 48%),#030406}
 body::before{background-image:linear-gradient(#438cff14 1px,transparent 1px),linear-gradient(90deg,#438cff14 1px,transparent 1px)}
 header{background:#06090e;border-color:#17283c}
 header strong{animation:none;background:none;color:#89bdff;-webkit-text-fill-color:currentColor;filter:drop-shadow(0 0 10px #388aff80)}
+.brand-letters{display:inline-flex}
+.brand-letters span{opacity:1}
+.brand-letters span.is-hidden{opacity:0}
 h1{background-image:linear-gradient(120deg,#eaf5ff,#9acaff,#659fff)}
 .bypass-title{color:#b0d3ff;border-color:#204575;background:radial-gradient(ellipse at center,#123b73,#080f1b 72%);text-shadow:0 0 12px #468dff}
 section,section:hover{background:linear-gradient(145deg,#101925,#080b10 65%);border-color:#243a53;box-shadow:inset 0 1px #8fbaff20,0 12px 26px #0008}
@@ -37,390 +53,31 @@ section::before{background:none}
 .status,select{background:#04070c;border-color:#13376e}
 button{background:linear-gradient(145deg,#072f83,#040c1d);border-color:#1954ab}
 input[role=switch]:checked{background:linear-gradient(125deg,#2474ff,#123aa4)}
-</style><style>html,body{background:#010308}header{background:radial-gradient(ellipse at 14% 50%,#092451 0%,#030914 48%,#010308 78%)}header strong{color:#b0d3ff;text-shadow:0 0 12px #468dff;filter:none}</style>
-
-<!-- ── Connection overlay ─────────────────────────────────────────── -->
-<style>
-#conn-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(1,3,8,.92);backdrop-filter:blur(18px);transition:opacity .3s}
-#conn-overlay.hidden{opacity:0;pointer-events:none}
-#conn-box{width:min(420px,90vw);padding:36px 32px;border:1px solid #103265;border-radius:22px;background:linear-gradient(145deg,#0a1628,#040810);box-shadow:0 24px 60px #000a,inset 0 1px #0064ff24;text-align:center}
-#conn-box h2{font-size:22px;margin:0 0 6px;color:#a4ceff;text-transform:none;letter-spacing:0}
-#conn-box p{margin:0 0 22px;color:#6a8db8;font-size:13px}
-#key-input{width:100%;padding:13px 16px;font:600 16px 'Courier New',monospace;letter-spacing:.18em;text-align:center;color:#e1efff;background:#04070c;border:1px solid #13376e;border-radius:10px;outline:none;text-transform:uppercase}
-#key-input:focus{border-color:#5e9fff;box-shadow:0 0 14px #2474ff55}
-#key-input::placeholder{color:#2a4a70;letter-spacing:.08em;font-weight:400}
-#conn-btn{width:100%;margin-top:14px;padding:13px;font-size:15px;font-weight:700;border-radius:10px;letter-spacing:.06em}
-#conn-btn:disabled{opacity:.45;cursor:not-allowed}
-#conn-error{color:#ff6b6b;font-size:13px;margin-top:10px;min-height:18px}
-#conn-status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:middle}
-.dot-off{background:#ff4757}.dot-on{background:#2ed573}.dot-connecting{background:#ffa502;animation:pulse-dot 1s infinite}
-@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.3}}
-</style>
-
-</head><body>
-
-<!-- ── Connection Overlay ──────────────────────────────────────────── -->
-<div id="conn-overlay">
-  <div id="conn-box">
-    <h2>LUNAR REMOTE</h2>
-    <p>Conecte-se ao dispositivo com sua chave de acesso</p>
-    <input id="key-input" type="text" placeholder="XXXX-XXXX-XXXX-XXXX-XXXX-XXXX" maxlength="29" autocomplete="off" spellcheck="false">
-    <button id="conn-btn" type="button">Conectar</button>
-    <div id="conn-error"></div>
-  </div>
-</div>
-
-<!-- ── Header ──────────────────────────────────────────────────────── -->
-<header><div>
-  <strong>PRIVATE</strong>
-  <span class="status" id="hdr-status"><span id="conn-status-dot" class="dot-off"></span><span id="hdr-status-text">Desconectado</span></span>
-</div></header>
-
-<div class="bypass-title">REMOTE BYPASS</div>
-
-<!-- ── Panel ───────────────────────────────────────────────────────── -->
-<main id="panel-main" style="display:none"><form autocomplete="off">
-<div class="intro">
-  <h1>Painel de controle</h1>
-  <button type="button" id="btn-reset">Desativar tudo</button>
-</div>
-
-<!-- IP info bar -->
-<div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;padding:10px 16px;border:1px solid #103265;border-radius:10px;background:#04070c;font-size:13px;color:#6a8db8">
-  <span id="conn-status-dot2" class="dot-off" style="flex:none"></span>
-  <span>Device: <strong id="device-ip-label" style="color:#a4ceff;letter-spacing:.04em">--</strong></span>
-  <span style="margin-left:auto">Key: <strong id="active-key-label" style="color:#5e9fff;font-family:'Courier New',monospace;font-size:12px">--</strong></span>
-</div>
-
-<div class="grid"><div class="column">
-
-<!-- ── Mira ────────────────────────────────────── -->
-<section><h2>Mira</h2>
-<div class="row"><label for="c1">Mode</label><select id="c1"><option value="0">Off</option><option value="1">Legit</option><option value="2">Rage</option></select></div>
-<div class="row"><label for="c2">FOV</label><div class="range"><input id="c2" type="range" min="1" max="90" step="1" value="1"><output for="c2">1</output></div></div>
-<div class="row"><label for="c3">Smooth</label><div class="range"><input id="c3" type="range" min="1" max="20" step="1" value="1"><output for="c3">1</output></div></div>
-<div class="row"><label for="c4">Bone</label><select id="c4"><option value="0">Cabeca</option><option value="1">Pescoco</option><option value="2">Peito</option><option value="3">Inteligente</option></select></div>
-<div class="row"><label for="c5">Chest-first N</label><div class="range"><input id="c5" type="range" min="1" max="15" step="1" value="1"><output for="c5">1</output></div></div>
-<div class="row"><label for="c6">Head delay (s)</label><div class="range"><input id="c6" type="range" min="0" max="2" step="0.1" value="0"><output for="c6">0</output></div></div>
-<div class="row"><label for="c7">Silent Aim</label><input id="c7" type="checkbox" role="switch"></div>
-<div class="row"><label for="c8">Silent FOV</label><div class="range"><input id="c8" type="range" min="1" max="180" step="1" value="1"><output for="c8">1</output></div></div>
-</section>
-
-<!-- ── Disparo ─────────────────────────────────── -->
-<section><h2>Disparo</h2>
-<div class="row"><label for="c15">No Recoil</label><input id="c15" type="checkbox" role="switch"></div>
-<div class="row"><label for="c16">No Spread</label><input id="c16" type="checkbox" role="switch"></div>
-<div class="row"><label for="c17">Rapid Fire</label><input id="c17" type="checkbox" role="switch"></div>
-<div class="row"><label for="c18">Recoil Mode</label><select id="c18"><option value="0">Off</option><option value="1">Zero</option><option value="2">Stealth</option></select></div>
-<div class="row"><label for="c19">Recoil %</label><div class="range"><input id="c19" type="range" min="0" max="100" step="1" value="0"><output for="c19">0</output></div></div>
-<div class="row"><label for="c20">Spread %</label><div class="range"><input id="c20" type="range" min="0" max="100" step="1" value="0"><output for="c20">0</output></div></div>
-<div class="row"><label for="c21">Fire Delay</label><div class="range"><input id="c21" type="range" min="0" max="500" step="1" value="0"><output for="c21">0</output></div></div>
-</section>
-
-</div><div class="column">
-
-<!-- ── ESP ─────────────────────────────────────── -->
-<section><h2>ESP</h2>
-<div class="row"><label for="c9">ESP Enabled</label><input id="c9" type="checkbox" role="switch"></div>
-<div class="row"><label for="c10">Box</label><input id="c10" type="checkbox" role="switch"></div>
-<div class="row"><label for="c11">HP Bar</label><input id="c11" type="checkbox" role="switch"></div>
-<div class="row"><label for="c12">Distance</label><input id="c12" type="checkbox" role="switch"></div>
-<div class="row"><label for="c13">Snapline</label><input id="c13" type="checkbox" role="switch"></div>
-<div class="row"><label for="c14">Max Distance</label><div class="range"><input id="c14" type="range" min="50" max="500" step="1" value="50"><output for="c14">50</output></div></div>
-</section>
-
-<!-- ── Extras ──────────────────────────────────── -->
-<section><h2>Extras</h2>
-<div class="row"><label for="c22">AC Bypass</label><input id="c22" type="checkbox" role="switch"></div>
-<div class="row"><label for="c23">Speedhack</label><input id="c23" type="checkbox" role="switch"></div>
-<div class="row"><label for="c24">Speed</label><div class="range"><input id="c24" type="range" min="0.5" max="3" step="0.1" value="0.5"><output for="c24">0.5</output></div></div>
-</section>
-
-</div></div>
-</form></main>
-
-<!-- ============================================================================
-     LUNAR REMOTE — WebSocket Client
-     Conecta ao servidor relay e sincroniza controles c1-c24 com lunar::g_cfg
-============================================================================= -->
+</style><style>html,body{background:#010308}header{background:radial-gradient(ellipse at 14% 50%,#092451 0%,#030914 48%,#010308 78%)}header strong{color:#b0d3ff;text-shadow:0 0 12px #468dff;filter:none}</style></head><body><header><div><strong>PRIVATE</strong><span class="status">Prévia local</span></div></header><div class="bypass-title">REMOTE BYPASS</div><main><form autocomplete="off"><div class="intro"><h1>Painel de controle</h1><button type="reset">Desativar tudo</button></div><div class="grid"><div class="column"><section><h2>Mira</h2><div class="row"><label for="c1">Mode</label><select id="c1"><option>Off</option><option>Legit</option><option>Rage</option></select></div><div class="row"><label for="c2">FOV</label><div class="range"><input id="c2" type="range" min="1" max="90" step="1" value="1"><output for="c2">1</output></div></div><div class="row"><label for="c3">Smooth</label><div class="range"><input id="c3" type="range" min="1" max="20" step="1" value="1"><output for="c3">1</output></div></div><div class="row"><label for="c4">Bone</label><select id="c4"><option>Cabeça</option><option>Pescoço</option><option>Peito</option><option>Inteligente</option></select></div><div class="row"><label for="c5">Chest-first N</label><div class="range"><input id="c5" type="range" min="1" max="15" step="1" value="1"><output for="c5">1</output></div></div><div class="row"><label for="c6">Head delay (s)</label><div class="range"><input id="c6" type="range" min="0" max="2" step="0.1" value="0"><output for="c6">0</output></div></div><div class="row"><label for="c7">Silent Aim</label><input id="c7" type="checkbox" role="switch"></div><div class="row"><label for="c8">Silent FOV</label><div class="range"><input id="c8" type="range" min="1" max="180" step="1" value="1"><output for="c8">1</output></div></div></section><section><h2>Disparo</h2><div class="row"><label for="c15">No Recoil</label><input id="c15" type="checkbox" role="switch"></div><div class="row"><label for="c16">No Spread</label><input id="c16" type="checkbox" role="switch"></div><div class="row"><label for="c17">Rapid Fire</label><input id="c17" type="checkbox" role="switch"></div><div class="row"><label for="c18">Recoil Mode</label><select id="c18"><option>Off</option><option>Zero</option><option>Stealth</option></select></div><div class="row"><label for="c19">Recoil %</label><div class="range"><input id="c19" type="range" min="0" max="100" step="1" value="0"><output for="c19">0</output></div></div><div class="row"><label for="c20">Spread %</label><div class="range"><input id="c20" type="range" min="0" max="100" step="1" value="0"><output for="c20">0</output></div></div><div class="row"><label for="c21">Fire Delay</label><div class="range"><input id="c21" type="range" min="0" max="500" step="1" value="0"><output for="c21">0</output></div></div></section></div><div class="column"><section><h2>ESP</h2><div class="row"><label for="c9">ESP Enabled</label><input id="c9" type="checkbox" role="switch"></div><div class="row"><label for="c10">Box</label><input id="c10" type="checkbox" role="switch"></div><div class="row"><label for="c11">HP Bar</label><input id="c11" type="checkbox" role="switch"></div><div class="row"><label for="c12">Distance</label><input id="c12" type="checkbox" role="switch"></div><div class="row"><label for="c13">Snapline</label><input id="c13" type="checkbox" role="switch"></div><div class="row"><label for="c14">Max Distance</label><div class="range"><input id="c14" type="range" min="50" max="500" step="1" value="50"><output for="c14">50</output></div></div></section><section><h2>Extras</h2><div class="row"><label for="c22">AC Bypass</label><input id="c22" type="checkbox" role="switch"></div><div class="row"><label for="c23">Speedhack</label><input id="c23" type="checkbox" role="switch"></div><div class="row"><label for="c24">Speed</label><div class="range"><input id="c24" type="range" min="0.5" max="3" step="0.1" value="0.5"><output for="c24">0.5</output></div></div></section></div></div></form></main>
 <script>
-(function() {
-  'use strict';
-
-  // ── Mapeamento: ID do controle → campo da config no servidor ──────────────
-  const CONTROL_MAP = {
-    c1:  { key: 'aim_mode',          type: 'select-int' },
-    c2:  { key: 'aim_fov',           type: 'range-int'  },
-    c3:  { key: 'aim_smooth',        type: 'range-int'  },
-    c4:  { key: 'aim_bone',          type: 'select-int' },
-    c5:  { key: 'chest_first_n',     type: 'range-int'  },
-    c6:  { key: 'head_switch_delay', type: 'range-float'},
-    c7:  { key: 'silent_aim',        type: 'switch'     },
-    c8:  { key: 'silent_fov',        type: 'range-int'  },
-    c9:  { key: 'esp',               type: 'switch'     },
-    c10: { key: 'esp_box',           type: 'switch'     },
-    c11: { key: 'esp_hp',            type: 'switch'     },
-    c12: { key: 'esp_dist',          type: 'switch'     },
-    c13: { key: 'esp_snap',          type: 'switch'     },
-    c14: { key: 'esp_max_dist',      type: 'range-int'  },
-    c15: { key: 'norecoil',          type: 'switch'     },
-    c16: { key: 'nospread',          type: 'switch'     },
-    c17: { key: 'rapidfire',         type: 'switch'     },
-    c18: { key: 'recoil_mode',       type: 'select-int' },
-    c19: { key: 'recoil_scale',      type: 'range-int'  },
-    c20: { key: 'spread_scale',      type: 'range-int'  },
-    c21: { key: 'fire_delay',        type: 'range-int'  },
-    c22: { key: 'bypass',            type: 'switch'     },
-    c23: { key: 'speedhack',         type: 'switch'     },
-    c24: { key: 'speed_scale',       type: 'range-float'}
-  };
-
-  // Mapeamento inverso: config key → control ID
-  const KEY_TO_CTRL = {};
-  for (const [cid, spec] of Object.entries(CONTROL_MAP)) {
-    KEY_TO_CTRL[spec.key] = { id: cid, type: spec.type };
-  }
-
-  // ── Elementos ─────────────────────────────────────────────────────────────
-  const overlay     = document.getElementById('conn-overlay');
-  const keyInput    = document.getElementById('key-input');
-  const connBtn     = document.getElementById('conn-btn');
-  const connError   = document.getElementById('conn-error');
-  const panelMain   = document.getElementById('panel-main');
-  const hdrStatus   = document.getElementById('hdr-status-text');
-  const dot1        = document.getElementById('conn-status-dot');
-  const dot2        = document.getElementById('conn-status-dot2');
-  const ipLabel     = document.getElementById('device-ip-label');
-  const keyLabel    = document.getElementById('active-key-label');
-  const btnReset    = document.getElementById('btn-reset');
-
-  let ws = null;
-  let currentKey = '';
-  let reconnectTimer = null;
-  let suppressEvents = false; // evita loop ao aplicar sync
-
-  // ── Formatar input da chave (auto-dash) ───────────────────────────────────
-  keyInput.addEventListener('input', () => {
-    let raw = keyInput.value.replace(/[^A-Fa-f0-9]/g, '').toUpperCase();
-    // Inserir traços a cada 4 chars
-    const parts = raw.match(/.{1,4}/g) || [];
-    keyInput.value = parts.join('-');
+const form = document.querySelector('form');
+const updateValues = () => {
+  form.querySelectorAll('output').forEach(output => {
+    output.value = document.getElementById(output.htmlFor.value).value;
   });
+};
+form.addEventListener('input', updateValues);
+form.addEventListener('reset', () => requestAnimationFrame(updateValues));
+</script></body></html>
 
-  keyInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') connBtn.click();
-  });
 
-  // ── Conexão ───────────────────────────────────────────────────────────────
-  connBtn.addEventListener('click', () => {
-    const key = keyInput.value.trim().toUpperCase();
-    if (key.replace(/-/g, '').length < 8) {
-      connError.textContent = 'Chave muito curta';
-      return;
-    }
-    currentKey = key;
-    connect(key);
-  });
 
-  function connect(key) {
-    if (ws) { ws.onclose = null; ws.close(); }
 
-    connBtn.disabled = true;
-    connBtn.textContent = 'Conectando...';
-    connError.textContent = '';
-    setDots('connecting');
-    hdrStatus.textContent = 'Conectando...';
 
-    // Determina URL do WebSocket baseado na URL atual
-    const loc = window.location;
-    const proto = loc.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsUrl = proto + '//' + loc.host;
 
-    ws = new WebSocket(wsUrl);
 
-    ws.onopen = () => {
-      // Autenticar como painel
-      ws.send(JSON.stringify({ type: 'auth', key: key, role: 'panel' }));
-      connBtn.textContent = 'Conectar';
-      connBtn.disabled = false;
-    };
 
-    ws.onmessage = (ev) => {
-      let msg;
-      try { msg = JSON.parse(ev.data); } catch { return; }
-      handleMessage(msg);
-    };
 
-    ws.onclose = () => {
-      setDots('off');
-      hdrStatus.textContent = 'Desconectado';
-      // Reconectar automaticamente se já estava autenticado
-      if (currentKey && !overlay.classList.contains('hidden')) return;
-      if (currentKey) {
-        hdrStatus.textContent = 'Reconectando...';
-        setDots('connecting');
-        clearTimeout(reconnectTimer);
-        reconnectTimer = setTimeout(() => connect(currentKey), 3000);
-      }
-    };
 
-    ws.onerror = () => {
-      connError.textContent = 'Erro de conexao. Verifique o servidor.';
-      connBtn.textContent = 'Conectar';
-      connBtn.disabled = false;
-    };
-  }
 
-  // ── Processar mensagens do servidor ────────────────────────────────────────
-  function handleMessage(msg) {
-    switch (msg.type) {
 
-      case 'init':
-        // Autenticado com sucesso — mostrar painel
-        overlay.classList.add('hidden');
-        panelMain.style.display = '';
-        keyLabel.textContent = currentKey;
 
-        // Aplicar config recebida
-        applyConfig(msg.config);
 
-        // Status do device
-        setDeviceStatus(msg.online, msg.ip);
 
-        // Salvar chave no localStorage
-        try { localStorage.setItem('lunar_key', currentKey); } catch {}
-        break;
 
-      case 'config_sync':
-        // Outro painel mudou algo — sincronizar
-        applyConfig(msg.changes);
-        break;
 
-      case 'device_status':
-        setDeviceStatus(msg.online, msg.ip);
-        break;
-
-      case 'ip_update':
-        ipLabel.textContent = msg.ip || '--';
-        break;
-
-      case 'error':
-        connError.textContent = msg.msg || 'Erro desconhecido';
-        break;
-    }
-  }
-
-  // ── Status do device ──────────────────────────────────────────────────────
-  function setDeviceStatus(online, ip) {
-    if (online) {
-      setDots('on');
-      hdrStatus.textContent = 'Device online';
-      ipLabel.textContent = ip || '--';
-    } else {
-      setDots('off');
-      hdrStatus.textContent = 'Device offline';
-      ipLabel.textContent = ip || '--';
-    }
-  }
-
-  function setDots(state) {
-    const cls = state === 'on' ? 'dot-on' : state === 'connecting' ? 'dot-connecting' : 'dot-off';
-    dot1.className = cls;
-    dot2.className = cls;
-  }
-
-  // ── Aplicar config aos controles (server → UI) ────────────────────────────
-  function applyConfig(cfg) {
-    suppressEvents = true;
-    for (const [cfgKey, value] of Object.entries(cfg)) {
-      const ctrl = KEY_TO_CTRL[cfgKey];
-      if (!ctrl) continue;
-      const el = document.getElementById(ctrl.id);
-      if (!el) continue;
-
-      if (ctrl.type === 'switch') {
-        el.checked = !!value;
-      } else if (ctrl.type === 'select-int') {
-        el.value = String(value);
-      } else {
-        el.value = value;
-        // Atualizar output associado
-        const out = document.querySelector(`output[for="${ctrl.id}"]`);
-        if (out) out.value = value;
-      }
-    }
-    suppressEvents = false;
-  }
-
-  // ── Enviar mudanças (UI → server) ─────────────────────────────────────────
-  function sendChange(controlId) {
-    if (suppressEvents || !ws || ws.readyState !== WebSocket.OPEN) return;
-
-    const spec = CONTROL_MAP[controlId];
-    if (!spec) return;
-
-    const el = document.getElementById(controlId);
-    if (!el) return;
-
-    let value;
-    if (spec.type === 'switch') {
-      value = el.checked;
-    } else if (spec.type === 'select-int' || spec.type === 'range-int') {
-      value = parseInt(el.value, 10);
-    } else if (spec.type === 'range-float') {
-      value = parseFloat(el.value);
-    }
-
-    ws.send(JSON.stringify({
-      type: 'config_update',
-      changes: { [spec.key]: value }
-    }));
-  }
-
-  // ── Event listeners nos controles ─────────────────────────────────────────
-  const form = document.querySelector('form');
-
-  // Range inputs — enviar no input (tempo real enquanto arrasta)
-  form.addEventListener('input', (e) => {
-    const el = e.target;
-    // Atualizar output visual
-    if (el.type === 'range') {
-      const out = document.querySelector(`output[for="${el.id}"]`);
-      if (out) out.value = el.value;
-    }
-    // Enviar mudanca
-    if (CONTROL_MAP[el.id]) {
-      sendChange(el.id);
-    }
-  });
-
-  // Switches (checkbox) — enviar no change
-  form.addEventListener('change', (e) => {
-    const el = e.target;
-    if (CONTROL_MAP[el.id] && el.getAttribute('role') === 'switch') {
-      sendChange(el.id);
-    }
-    // Selects
-    if (CONTROL_MAP[el.id] && el.tagName === 'SELECT') {
-      sendChange(el.id);
-    }
-  });
-
-  // ── Desativar tudo ────────────────────────────────────────────────────────
-  btnReset.addEventListener('click', () => {
-    if (!ws || ws.readyState !== WebSocket.OPEN) return;
-    ws.send(JSON.stringify({ type: 'reset_all' }));
-  });
-
-  // ── Auto-reconectar com chave salva ───────────────────────────────────────
-  try {
-    const saved = localStorage.getItem('lunar_key');
-    if (saved) {
-      keyInput.value = saved;
-    }
-  } catch {}
-
-})();
-</script>
-
-</body></html>
